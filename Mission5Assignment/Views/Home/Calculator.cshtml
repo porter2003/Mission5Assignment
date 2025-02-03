@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Tutoring Calculator";
+}
+
+<div class="container mt-4 text-center">
+    <h1>Weightlifting Tutoring Calculator</h1>
+
+    <p>Want to improve your lifting form, programming, and nutrition? I offer tutoring services to help you out!</p>
+
+    <div class="card p-4 mx-auto" style="max-width: 400px;">
+        <div class="mb-3">
+            <label for="hoursInput" class="form-label">Enter the number of hours:</label>
+            <input type="number" id="hoursInput" class="form-control" min="0" step="1" placeholder="Enter hours">
+            <small id="errorMessage" class="text-danger d-none">Please enter a valid positive number.</small>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Hourly Rate ($):</label>
+            <input type="text" id="hourlyRate" class="form-control" value="30" readonly>
+        </div>
+
+        <button id="calculateBtn" class="btn btn-primary">Calculate Total</button>
+
+        <div class="mt-3">
+            <label class="form-label">Total Cost ($):</label>
+            <input type="text" id="totalCost" class="form-control" readonly>
+        </div>
+    </div>
+
+    <a href="@Url.Action("Index", "Home")" class="btn btn-primary mt-3">Back to Home</a>
+</div>
+
+<!-- jQuery Script -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="~/js/calculator.js"></script>
